@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
+    .container {
+      display: flex;
+    }
+    .sidebar {
+      width: 200px;
+    }
+    .content {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <main>
+    <div class="container">
+      <nav class="sidebar">
+        <ul>
+          <li><a href="/">Introduction</a></li>
+          <li><a href="/computer-game-platform">Computer Game Platform</a></li>
+          <li><a href="/media-format">Media Format</a></li>
+        </ul>
+      </nav>
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; {{ 'now' | date: "%Y" }} Game Metadata and Citation Project Controlled Vocabularies</p>
+  </footer>
+</body>
+</html>
